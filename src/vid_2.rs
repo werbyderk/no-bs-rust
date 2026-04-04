@@ -1,5 +1,6 @@
 #![allow(dead_code)]
-// **START EDITS HERE**
+
+// ** START EDITS HERE **
 fn add_5(x: u32) -> u32 {
     // Return x plus 5
 }
