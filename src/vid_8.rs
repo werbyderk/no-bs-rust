@@ -75,6 +75,8 @@ where
 // Try not to look at tests until you finished your implementations :)
 #[cfg(test)]
 pub mod tests {
+    use std::f64;
+
     use crate::vid_8::OriginDistance;
 
     #[test]
@@ -130,6 +132,15 @@ pub mod tests {
         let b = super::Point { x: 6.0, y: 1.2 };
         let sorted_output = a.sort_and_format(&b);
         assert_eq!(&sorted_output, &"(6, 1.2) (4.3, 0.4)".to_string());
+
+        // f64: NaN
+        let a = super::Point { x: 4.3, y: 0.4 };
+        let b = super::Point {
+            x: 6.0,
+            y: f64::NAN,
+        };
+        let sorted_output = a.sort_and_format(&b);
+        assert_eq!(&sorted_output, &"".to_string());
 
         // char: (x_a, y_a) (x_b, y_b)
         let a = super::Point { x: 'x', y: 'y' };
