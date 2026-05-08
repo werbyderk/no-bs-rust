@@ -9,6 +9,8 @@ pub struct Comparison<'a, 'b> {
     right: &'b str,
 }
 
+// ** START EDITS HERE **
+
 impl<'a, 'b> Comparison<'a, 'b> {
     // write an implementation get_left(&self) on Comparison that returns a reference to self.left even if self.right is not
     // a valid reference
@@ -19,6 +21,8 @@ impl<'a, 'b> Comparison<'a, 'b> {
 // of the static character array my_c_arr
 // remember string slices are indexed by byte. in this very specific case,
 // that is OK since we are dealing only with ASCII characters
+
+// ** END EDITS HERE **
 
 #[cfg(test)]
 pub mod tests {
