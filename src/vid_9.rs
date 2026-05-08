@@ -9,6 +9,8 @@ pub struct Comparison<'a, 'b> {
     right: &'b str,
 }
 
+// ** START EDITS HERE **
+
 impl<'a, 'b> Comparison<'a, 'b> {
     // write an implementation get_left(&self) on Comparison that returns a reference to self.left even if self.right is not
     // a valid reference
@@ -25,6 +27,8 @@ impl<'a, 'b> Comparison<'a, 'b> {
 fn foo_bar_n(n: usize, my_c_arr: &'static [char]) -> &'static [char] {
     &my_c_arr[..n]
 }
+
+// ** END EDITS HERE **
 
 #[cfg(test)]
 pub mod tests {
